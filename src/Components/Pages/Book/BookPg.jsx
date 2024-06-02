@@ -34,9 +34,7 @@ const BookPg = () => {
       const bookingRef = doc(collection(db, "Booking"), "FminIKd4Bfi3WijuD8C1");
   
       await updateDoc(bookingRef, "stringArray", arrayUnion(newString));
-  
-      console.log("String added successfully!");
-      alert(`Slot booked for ${newString}`)
+      
     } catch (error) {
       console.error("Error adding string:", error);
     }

@@ -19,7 +19,9 @@ const Main = () => {
           try {
             const querySnapshot = await getDocs(q);
             if(!querySnapshot.empty){
+            
               const data = querySnapshot.docs[0].data();
+              console.log(data)
               setSlots(data.Slots)
               setTslots(data.Tslots)
             }
